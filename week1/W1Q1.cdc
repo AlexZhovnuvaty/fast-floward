@@ -24,7 +24,7 @@ pub fun display(canvas: Canvas) {
   var rowId = 0
   log("Length: ".concat(canvas.height.toString()))
   while rowId < Int(canvas.height) {
-    log(canvas.pixels.slice(from: 5*rowId, upTo: 5*rowId + 5))
+    log(canvas.pixels.slice(from: 7*rowId, upTo: 7*rowId + 7))
     rowId = rowId + 1
   }
 
@@ -32,15 +32,17 @@ pub fun display(canvas: Canvas) {
 
 pub fun main() {
   let pixelsX = [
-    "*   *",
-    " * * ",
-    "  *  ",
-    " * * ",
-    "*   *"
+    "+-----+",
+    "|*   *|",
+    "| * * |",
+    "|  *  |",
+    "| * * |",
+    "|*   *|",
+    "+-----+"
   ]
   let canvasX = Canvas(
-    width: 5,
-    height: 5,
+    width: 7,
+    height: 7,
     pixels: serializeStringArray(pixelsX)
   )
   display(canvas: canvasX)
